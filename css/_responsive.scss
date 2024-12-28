@@ -1,0 +1,128 @@
+@media screen and (max-width: $medium) {
+
+    // header area style
+    .header_area {
+        .inner {
+            display: block;
+        }
+
+        .top_header_area {
+            .mobile_device {
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 16px;
+
+                i {
+                    font-size: 24px;
+                    cursor: pointer;
+                    color: $whiteColor;
+                }
+            }
+
+            .container {
+
+                .address,
+                .email_address,
+                .phone_number {
+                    display: none;
+                }
+
+                ul {
+                    text-align: center;
+                }
+            }
+        }
+
+        // main_header
+        .main_header {
+            .logo_area {
+                a h1 {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    // hero section style 
+    .hero_area {
+        .inner {
+            flex-direction: column;
+
+            .admin_info {
+                flex-basis: 100%;
+                padding: 20px;
+                order: 2;
+
+                h2 {
+                    font-size: 40px;
+                }
+            }
+
+            .admin_image {
+                flex-basis: 100%;
+                order: 1;
+            }
+        }
+    }
+
+    .inner {
+        flex-direction: column;
+    }
+
+    // about area
+    .about_area {
+        .container {
+            .about_numbers {
+                flex-basis: 100%;
+
+                .child_about {
+
+                    h4 {
+                        font-size: 26px;
+                    }
+
+                    h6 {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .about_info {
+                flex-basis: 100%;
+                padding: 14px;
+
+                h3 {
+                    font-size: 26px;
+                }
+
+                h6 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    // service_area
+    .service_area {
+        .container {
+            .child_service {
+                flex-direction: column;
+                margin-bottom: 10px;
+                padding: 20px;
+                i{
+                    margin-bottom: 0;
+                }
+                h4{
+                    font-size: 20px;
+                    margin-bottom: 6px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

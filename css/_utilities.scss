@@ -1,0 +1,132 @@
+// color
+$pColor: #182C61;
+$sColor: #f4c9c2;
+$bgColor: #f9ebea;
+$whiteColor: #fff;
+$bkColor: #11184f;
+// font weight
+$fontsm: 400;
+$fontMd: 600;
+$fontXl: 800;
+
+body,
+p {
+    font: {
+        size: 16px;
+        weight: $fontsm;
+    }
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $fontXl;
+    line-height: 1.2em;
+    margin: 0 0 16px;
+}
+
+// padding
+$paddingSm: 10px 0;
+$small: 200px;
+$medium: 768px;
+
+#paddingXL {
+    padding: 60px 0;
+    width: 100%;
+
+    @media only screen and (min-width: $small) and (max-width: $medium) {
+        padding: 20px 0;
+    }
+}
+
+// margin
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $small) and (max-width: $medium) {
+        width: 96%;
+    }
+}
+
+// header social_area
+.social_area {
+    ul {
+        text-align: right;
+
+        li {
+            margin-left: 8px;
+
+            a {
+                display: block;
+                background: $sColor;
+                height: 40px;
+                width: 40px;
+                color: $bkColor;
+                font-size: 16px;
+                text-align: center;
+                padding-top: 8px;
+                border-radius: 50%;
+
+                &:hover {
+                    background: $bkColor;
+                    color: $sColor;
+                }
+
+                i {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// header social_area end
+
+// call to action button 
+.btn_cta {
+    color: $whiteColor;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 6px;
+    margin-top: 6px;
+    font-weight: $fontMd;
+    background: $bkColor;
+    cursor: pointer;
+
+    &:hover {
+        background: $pColor;
+        color: $whiteColor;
+    }
+}
+
+
+// title
+.title {
+    font-size: 60px;
+    line-height: 1em;
+    margin-bottom: 0;
+
+    @media only screen and (min-width: $small) and (max-width: $medium) {
+        font-size: 28px;
+    }
+}
+
+.sub_title {
+    font-size: 28px;
+    font-weight: $fontMd;
+    line-height: 1em;
+    margin-bottom: 0;
+
+    @media only screen and (min-width: $small) and (max-width: $medium) {
+        font-size: 16px;
+    }
+}

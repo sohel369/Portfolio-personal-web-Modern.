@@ -1,0 +1,43 @@
+.service_area {
+    .text_center {
+        margin-bottom: 20px;
+    }
+    .container {
+        .child_service {
+            padding: 40px;
+            background: $bgColor;
+            flex-basis: 30%;
+            border-radius: 10px;
+            transition: .5s ease-in-out;
+            box-shadow: 0 0 10px #ddd;
+            margin-bottom: 10px;
+
+            i {
+                font-size: 48px;
+                color: $pColor;
+                margin-bottom: 20px;
+            }
+
+            h4 {
+                font-size: 26px;
+                color: $bkColor;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                background: $bkColor;
+                box-shadow: 0 0 20px #000;
+
+                i {
+                    color: $sColor;
+                }
+
+                h4,
+                p {
+                    color: $whiteColor;
+                }
+            }
+        }
+
+    }
+}

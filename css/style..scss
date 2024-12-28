@@ -1,0 +1,58 @@
+// utilities
+@import '_utilities';
+// header_area
+@import '_header';
+// hero area
+@import 'hero';
+// about area 
+@import 'about';
+// services area
+@import 'services';
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  list-style: 1.5rem;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ul li {
+  display: inline-block;
+}
+
+a {
+  transition: .5s ease;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text_center {
+  text-align: center;
+}/* Basic styling for loader */
+
+
+@import '_responsive';

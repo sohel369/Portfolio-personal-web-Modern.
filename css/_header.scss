@@ -1,0 +1,111 @@
+.header_area {
+
+    // top_header_area
+    .top_header_area {
+        background: $pColor;
+        padding: $paddingSm;
+
+        .mobile_device {
+            position: relative;
+            display: none;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        color: $whiteColor;
+    }
+
+    i {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    // main_header area
+    .main_header {
+        background: $whiteColor;
+        padding: 24px 0;
+        height: 60px;
+        margin-bottom: 10px;
+
+        .logo_area {
+            flex-basis: 24%;
+            text-align: left;
+
+            a h1 {
+                font-size: 28px;
+                color: $bkColor;
+                transition: .5s ease;
+                display: inline-block;
+
+                &:hover {
+                    color: $pColor;
+                }
+            }
+        }
+
+        .main_menu {
+            flex-basis: 70%;
+
+            ul {
+                text-align: right;
+                display: flex;
+                justify-content: end;
+
+                li {
+                    margin-left: 20px;
+
+                    a {
+                        color: $bkColor;
+                        font-weight: 500;
+                        font-size: 16px;
+
+                        &:hover {
+                            color: $pColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $medium) {
+    .main_menu {
+        background: $pColor;
+        position: absolute;
+        width: 96%;
+        left: -9999px;
+
+        ul {
+            flex-direction: column;
+
+            li {
+                margin-left: 0;
+                text-align: left;
+                margin-bottom: 6px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    color: $whiteColor;
+                    display: block;
+                    padding: 6px 10px;
+
+                    &:hover {
+                        background: $bkColor;
+                        color: $whiteColor;
+                    }
+                }
+            }
+        }
+
+        &.open {
+            left: 10px;
+        }
+    }
+}
