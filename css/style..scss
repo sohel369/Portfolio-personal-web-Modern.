@@ -8,6 +8,8 @@
 @import 'about';
 // services area
 @import 'services';
+// projects area
+@import 'project';
 
 *,
 ::after,
@@ -28,6 +30,11 @@ body {
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
+}
+.inner_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
 }
 
 .ul {
@@ -52,6 +59,13 @@ img {
 
 .text_center {
   text-align: center;
+  width: 100%;
+  h5,h3,h1,h2{
+    margin: 16px 0;
+    @media only screen and (min-width: $small) and (max-width: $medium) {
+      margin: 8px 0;
+  }
+  }
 }/* Basic styling for loader */
 
 

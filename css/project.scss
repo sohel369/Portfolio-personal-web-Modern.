@@ -1,0 +1,82 @@
+.Projects_area {
+    background: $sColor;
+    width: 100%;
+    height: auto;
+    position: relative; // Ensures a local stacking context
+
+    .project_box {
+        margin: 0;
+        position: relative; // Ensures local stacking for children
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            z-index: 1; // Lower than .project_info
+            position: relative;
+        }
+
+        .project_info {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: -9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: .3s ease;
+            z-index: 99;
+
+            h3, p {
+                position: relative;
+                color: $whiteColor;
+                z-index: 999; // Higher than ::after background
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background: $bkColor;
+                content: '';
+                transition: .3s ease;
+                opacity: .4;
+                z-index: 98; // Behind h3 and p but above img
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+
+        &:hover .project_info {
+            left: 0;
+        }
+    }
+
+    .project_x {
+        grid-column: auto / span 2;
+    }
+    .project_y {
+        grid-column: auto / span 2;
+    }
+    .project_xy {
+        grid-column: auto / span 2;
+        grid-row: auto / span 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Projects_area {
+        .inner_grid {
+            display: block;
+        }
+        .project_box {
+            margin-bottom: 16px;
+        }
+    }
+}

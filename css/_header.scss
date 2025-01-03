@@ -1,9 +1,13 @@
 .header_area {
-
     // top_header_area
     .top_header_area {
         background: $pColor;
         padding: $paddingSm;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2022;
 
         .mobile_device {
             position: relative;
@@ -74,10 +78,11 @@
 
 @media screen and (max-width: $medium) {
     .main_menu {
-        background: $pColor;
-        position: absolute;
+        background: #ced6e0;
+        position: fixed;
         width: 96%;
         left: -9999px;
+        z-index: 2000;
 
         ul {
             flex-direction: column;
